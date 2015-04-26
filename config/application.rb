@@ -35,7 +35,7 @@ module Mystore
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.assets.initialize_on_precompile = false
-
+    config.assets.precompile += %w( store/all.js store/all.css admin/all.js )
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
